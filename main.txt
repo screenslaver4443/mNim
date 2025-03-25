@@ -1,0 +1,8 @@
+## Testing to see if board displays
+#input
+## No input, just running
+#output
+    " "    " "    " "    "I"    " "    " "    " "
+    " "    " "    "I"    "I"    "I"    " "    " "
+    " "    "I"    "I"    "I"    "I"    "I"    " "
+    "I"    "I"    "I"    "I"    "I"    "I"    "I"
