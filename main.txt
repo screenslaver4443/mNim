@@ -2,7 +2,9 @@
 #input
 ## No input, just running
 #output
-    " "    " "    " "    "I"    " "    " "    " "
-    " "    " "    "I"    "I"    "I"    " "    " "
-    " "    "I"    "I"    "I"    "I"    "I"    " "
-    "I"    "I"    "I"    "I"    "I"    "I"    "I"
+   I   
+  III  
+ IIIII 
+IIIIIII
+
+## Output now looks cleaner missing " " for empty spaces while the actual board is stored using numbers instead of letters.
