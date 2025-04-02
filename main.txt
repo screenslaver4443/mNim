@@ -1,10 +1,11 @@
 ## Testing to see if board displays
 #input
 ## No input, just running
+## Now an input is available though no logic behind it exists.
 #output
    I   
   III  
  IIIII 
 IIIIIII
-
-## Output now looks cleaner missing " " for empty spaces while the actual board is stored using numbers instead of letters.
+There is 1 left in row & 16 matches left in total 
+## Output now contains count of matches left in row and total remaining matches. 
