@@ -35,8 +35,15 @@ while running
                     end
                     fprintf('\n');
                 end
+                % Display info to user and get input for matches to remove
                 fprintf('\n There is %d left in row & %d matches left in total \n', row1MatchCount, matchcount)
-                input(sprintf('How many matches do you remove (up to %d)? ', row1MatchCount));
+                toRemove = 10000;
+                while toRemove > row1MatchCount
+                    toRemove = input(sprintf('How many matches do you remove (up to %d)? ', row1MatchCount));
+                    if toRemove > row1MatchCount
+                        fprintf("Please enter less than %d", row1MatchCount);
+                    end
+                end
 
             end
     end
