@@ -1,13 +1,13 @@
+% This file contains the game NIM. (https://en.wikipedia.org/wiki/Nim)
 
 % Initialize variables
 state = "game"; % game, title
-% This file contains the game NIM. (https://en.wikipedia.org/wiki/Nim)
 running = true;
-
 % Switch statement to differentiate between title screen and game
 while running
     switch state
         case "title"
+            disp("placeholder")
             % Placeholder
 
         case "game"
@@ -18,10 +18,9 @@ while running
                 0, 1, 1, 1, 1, 1, 0;
                 1, 1, 1, 1, 1, 1, 1;
                 ];
-            playing = true;
             player = 1;
             %% Gameplay Loop
-            while playing
+            while true
                 % For loop
                 matchCount = 0;
                 for r = 1:height(board)
@@ -63,7 +62,10 @@ while running
                     end
                     board(height(board), :) = [];
                 end
-
+                % Check if board is empty
+                if isempty(board)
+                    break
+                end
                 % Change player
                 if player == 1
                     player = 2;
@@ -71,7 +73,22 @@ while running
                     player = 1;
                 end
             end
-
+            %% Post Game
+            fprintf("Player %d wins! \n", player);
+            playAgain = 'p';
+            while ~(playAgain == 'y' || playAgain == 'n')
+                playAgain = input("Play Again (y/n)?", "s");
+            end
+            switch playAgain
+                case "y"
+                    state = "game";
+                    continue
+                case "n"
+                    state = "title";
+                    continue
+                otherwise
+                    error("Invalid Input");
+            end
     end
     % disp(board);
 end
