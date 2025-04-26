@@ -1,13 +1,36 @@
 % This file contains the game NIM. (https://en.wikipedia.org/wiki/Nim)
 
 % Initialize variables
-state = "game"; % game, title
+state = "title"; % game, title
 running = true;
 % Switch statement to differentiate between title screen and game
 while running
     switch state
         case "title"
-            disp("placeholder")
+            %% Title Screen
+            disp("           _   _ _           ");
+            disp("          | \ | (_)          ");
+            disp(" _ __ ___ |  \| |_ _ __ ___  ");
+            disp("| '_ ` _ \| . ` | | '_ ` _ \ ");
+            disp("| | | | | | |\  | | | | | | |");
+            disp("|_| |_| |_\_| \_/_|_| |_| |_|");
+            fprintf("Nim Written in Matlab \n");
+            while true
+                fprintf("Choose option: (Play, Quit, Define (What is Nim?)) \n")
+                choice = input("", "s");
+                switch choice
+                    case {"Play", "play"}
+                        state = "game";
+                        break
+                    case {"Quit", "quit"}
+                        running = false;
+                        break;
+                    case {"Define", "define"}
+                        fprintf('"Nim is a mathematical combinatorial game in which two players take turns removing (or "nimming") objects from distinct heaps or piles.\n On each turn, a player must remove at least one object, and may remove any number of objects provided they all come from the same heap or pile. Depending on the version being played, the goal of the game is either to avoid taking the last object or to take the last object." \n - https://en.wikipedia.org/wiki/Nim\n');
+                    otherwise
+                        fprintf("Unknown Option \n");
+                end
+            end
             % Placeholder
 
         case "game"
@@ -62,15 +85,15 @@ while running
                     end
                     board(height(board), :) = [];
                 end
-                % Check if board is empty
-                if isempty(board)
-                    break
-                end
                 % Change player
                 if player == 1
                     player = 2;
                 else
                     player = 1;
+                end
+                % Check if board is empty
+                if isempty(board)
+                    break
                 end
             end
             %% Post Game

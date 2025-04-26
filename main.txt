@@ -1,6 +1,8 @@
 ## Testing to see if board displays, * means that an output is from after an input
 #input
 ## running file
+define
+play
 1
 4
 2
@@ -8,7 +10,28 @@
 1
 5
 7
+y
+1
+3
+5
+7
+n
+quit
 #expected output
+           _   _ _           
+          | \ | (_)          
+ _ __ ___ |  \| |_ _ __ ___  
+| '_ ` _ \| . ` | | '_ ` _ \ 
+| | | | | | |\  | | | | | | |
+|_| |_| |_\_| \_/_|_| |_| |_|
+Nim Written in Matlab 
+Choose option: (Play, Quit, Define (What is Nim?)) 
+*
+"Nim is a mathematical combinatorial game in which two players take turns removing (or "nimming") objects from distinct heaps or piles.
+ On each turn, a player must remove at least one object, and may remove any number of objects provided they all come from the same heap or pile. Depending on the version being played, the goal of the game is either to avoid taking the last object or to take the last object." 
+ - https://en.wikipedia.org/wiki/Nim
+Choose option: (Play, Quit, Define (What is Nim?)) 
+*
    I   
   III  
  IIIII 
@@ -47,8 +70,8 @@ IIIIIII
 Player 1, How many matches do you remove (up to 7)?
 *
 Player 2 Wins!
-
-#Actual Output
+Play Again (y/n)?
+*
    I   
   III  
  IIIII 
@@ -64,9 +87,62 @@ IIIIIII
  There is 3 left in row & 15 matches left in total 
 Player 2, How many matches do you remove (up to 3)? 
 *
-Please enter 3 or less.
+ IIIII 
+IIIIIII
+
+ There is 5 left in row & 12 matches left in total 
+Player 1, How many matches do you remove (up to 5)? 
+*
+IIIIIII
+
+ There is 7 left in row & 7 matches left in total 
+Player 2, How many matches do you remove (up to 7)? 
+*
+Player 1 wins! 
+Play Again (y/n)?
+*
+           _   _ _           
+          | \ | (_)          
+ _ __ ___ |  \| |_ _ __ ___  
+| '_ ` _ \| . ` | | '_ ` _ \ 
+| | | | | | |\  | | | | | | |
+|_| |_| |_\_| \_/_|_| |_| |_|
+Nim Written in Matlab 
+Choose option: (Play, Quit, Define (What is Nim?)) 
+*
+## Program Ends
+
+#Actual Output
+           _   _ _           
+          | \ | (_)          
+ _ __ ___ |  \| |_ _ __ ___  
+| '_ ` _ \| . ` | | '_ ` _ \ 
+| | | | | | |\  | | | | | | |
+|_| |_| |_\_| \_/_|_| |_| |_|
+Nim Written in Matlab 
+Choose option: (Play, Quit, Define (What is Nim?)) 
+*
+"Nim is a mathematical combinatorial game in which two players take turns removing (or "nimming") objects from distinct heaps or piles.
+ On each turn, a player must remove at least one object, and may remove any number of objects provided they all come from the same heap or pile. Depending on the version being played, the goal of the game is either to avoid taking the last object or to take the last object." 
+ - https://en.wikipedia.org/wiki/Nim
+Choose option: (Play, Quit, Define (What is Nim?)) 
+*
+   I   
+  III  
+ IIIII 
+IIIIIII
+There is 1 left in row & 16 matches left in total 
+Player 1, How many matches do you remove (up to 1)? 
+*
+  III  
+ IIIII 
+IIIIIII
+
+ There is 3 left in row & 15 matches left in total 
 Player 2, How many matches do you remove (up to 3)? 
 *
+Please enter 3 or less.
+Player 2, How many matches do you remove (up to 3)? 
   I    
  IIIII 
 IIIIIII
@@ -86,8 +162,47 @@ Player 2, How many matches do you remove (up to 5)?
 IIIIIII
 
  There is 7 left in row & 7 matches left in total 
-Player 1, How many matches do you remove (up to 7)? 
+Player 1, How many matches do you remove (up to 7)?
+*
+Player 2 Wins!
+Play Again (y/n)?
+*
+   I   
+  III  
+ IIIII 
+IIIIIII
+
+ There is 1 left in row & 16 matches left in total 
+Player 1, How many matches do you remove (up to 1)? 
+*
+  III  
+ IIIII 
+IIIIIII
+
+ There is 3 left in row & 15 matches left in total 
+Player 2, How many matches do you remove (up to 3)? 
+*
+ IIIII 
+IIIIIII
+
+ There is 5 left in row & 12 matches left in total 
+Player 1, How many matches do you remove (up to 5)? 
+*
+IIIIIII
+
+ There is 7 left in row & 7 matches left in total 
+Player 2, How many matches do you remove (up to 7)? 
 *
 Player 1 wins! 
-
-### Player wasn't updated before the win screen was shown. 
+Play Again (y/n)?
+*
+           _   _ _           
+          | \ | (_)          
+ _ __ ___ |  \| |_ _ __ ___  
+| '_ ` _ \| . ` | | '_ ` _ \ 
+| | | | | | |\  | | | | | | |
+|_| |_| |_\_| \_/_|_| |_| |_|
+Nim Written in Matlab 
+Choose option: (Play, Quit, Define (What is Nim?)) 
+*
+# Output as expected
