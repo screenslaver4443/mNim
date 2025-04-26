@@ -1,11 +1,95 @@
-## Testing to see if board displays
+## Testing to see if board displays, * means that an output is from after an input
 #input
-## No input, just running
-## Now an input is available though no logic behind it exists.
-#output
+## running file
+1
+4
+2
+0
+1
+5
+7
+#expected output
    I   
   III  
  IIIII 
 IIIIIII
 There is 1 left in row & 16 matches left in total 
-## Output now contains count of matches left in row and total remaining matches. 
+Player 1, How many matches do you remove (up to 1)? 
+*
+  III  
+ IIIII 
+IIIIIII
+
+ There is 3 left in row & 15 matches left in total 
+Player 2, How many matches do you remove (up to 3)? 
+*
+Please enter 3 or less.
+Player 2, How many matches do you remove (up to 3)? 
+  I    
+ IIIII 
+IIIIIII
+
+ There is 1 left in row & 13 matches left in total 
+Player 1, How many matches do you remove (up to 1)? 
+*
+You cannot remove 0 or less matches. 
+Player 1, How many matches do you remove (up to 1)? 
+*
+ IIIII 
+IIIIIII
+
+ There is 5 left in row & 12 matches left in total 
+Player 2, How many matches do you remove (up to 5)? 
+*
+IIIIIII
+
+ There is 7 left in row & 7 matches left in total 
+Player 1, How many matches do you remove (up to 7)?
+*
+ There is 0 left in row & 0 matches left in total 
+Player 2, How many matches do you remove (up to 0)? 
+
+### A win screen has not been implemented yet, it is expected to show an empty row with zero remaining.
+
+#Actual Output
+   I   
+  III  
+ IIIII 
+IIIIIII
+There is 1 left in row & 16 matches left in total 
+Player 1, How many matches do you remove (up to 1)? 
+*
+  III  
+ IIIII 
+IIIIIII
+
+ There is 3 left in row & 15 matches left in total 
+Player 2, How many matches do you remove (up to 3)? 
+*
+Please enter 3 or less.
+Player 2, How many matches do you remove (up to 3)? 
+  I    
+ IIIII 
+IIIIIII
+
+ There is 1 left in row & 13 matches left in total 
+Player 1, How many matches do you remove (up to 1)? 
+*
+You cannot remove 0 or less matches. 
+Player 1, How many matches do you remove (up to 1)? 
+*
+ IIIII 
+IIIIIII
+
+ There is 5 left in row & 12 matches left in total 
+Player 2, How many matches do you remove (up to 5)? 
+*
+IIIIIII
+
+ There is 7 left in row & 7 matches left in total 
+Player 1, How many matches do you remove (up to 7)?
+*
+ There is 7 left in row & 0 matches left in total 
+Player 2, How many matches do you remove (up to 7)? 
+
+### the for loop doesn't execute over an empty array so the row1MatchCount is never updated from 7.
