@@ -17,7 +17,7 @@ while running
             fprintf("Nim Written in Matlab \n");
             while true
                 fprintf("Choose option: (Play, Quit, Define (What is Nim?)) \n")
-                choice = input("", "s");
+                choice = input("> ", "s");
                 switch choice
                     case {"Play", "play"}
                         state = "game";
@@ -31,8 +31,6 @@ while running
                         fprintf("Unknown Option \n");
                 end
             end
-            % Placeholder
-
         case "game"
             %% Setup
             board = [
@@ -44,22 +42,7 @@ while running
             player = 1;
             %% Gameplay Loop
             while true
-                % For loop
-                matchCount = 0;
-                for r = 1:height(board)
-                    for c = 1:length(board)
-                        if board(r, c) == 1
-                            fprintf('I');
-                            matchCount = matchCount+1;
-                        else
-                            fprintf(' ');
-                        end
-                    end
-                    if r == 1
-                        row1MatchCount = matchCount;
-                    end
-                    fprintf('\n');
-                end
+                [matchCount, row1MatchCount] = drawBoard(board);
                 % Display info to user and get input for matches to remove
                 fprintf('\n There is %d left in row & %d matches left in total \n', row1MatchCount, matchCount)
                 toRemove = 10000;
